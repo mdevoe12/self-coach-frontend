@@ -32,15 +32,17 @@ export default {
   },
   methods: {
     login() {
-      this.axios.post('localhost:3000/login', {
+      this.axios.post('http://localhost:3000/login', {
         email: this.email,
         password: this.password
       })
       .then((response) => {
-        console.log(response)
+        console.log('success')
       })
       .catch((error) => {
+        debugger
         console.log(error)
+        console.log('failure')
       })
     }
   }

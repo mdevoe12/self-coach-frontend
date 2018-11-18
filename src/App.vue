@@ -1,6 +1,19 @@
 <template>
   <div id="app">
-    <h5>WELCOME TO THE THUNDERDOME</h5>
+    <h5>welcome to trend tracker</h5>
+    <h5>please login to continue</h5>
+
+    <p>
+      <label>email: </label>
+      <input type="text"
+             v-model="email">
+    </p>
+    <p>
+      <label>password: </label>
+      <input type="password"
+             v-model="password">
+    </p>
+    <button>Login</button>
   </div>
 </template>
 
@@ -10,6 +23,12 @@ export default {
   name: 'app',
   components: {
 
+  },
+  data() {
+    return {
+      email: '',
+      password: ''
+    }
   }
 }
 </script>

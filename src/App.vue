@@ -1,33 +1,24 @@
 <template>
   <div id="app">
-    <h5>welcome to trend tracker</h5>
-    <h5>please login to continue</h5>
-
-    <p>
-      <label>email: </label>
-      <input type="text"
-             v-model="email">
-    </p>
-    <p>
-      <label>password: </label>
-      <input type="password"
-             v-model="password">
-    </p>
-    <button>Login</button>
+    <template v-if="authenticated">
+      <h5>logged in</h5>
+    </template>
+    <template v-else>
+      <Login @logged-in="authenticated=true"></Login>
+    </template>
   </div>
 </template>
 
 <script>
-
+import Login from './components/Login'
 export default {
   name: 'app',
   components: {
-
+    Login
   },
   data() {
     return {
-      email: '',
-      password: ''
+      authenticated: false
     }
   }
 }

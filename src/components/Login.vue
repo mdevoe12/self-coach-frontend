@@ -13,7 +13,9 @@
       <input type="password"
              v-model="password">
     </p>
-    <button @click="$emit('logged-in')">Login</button>
+    <button @click="login">
+      Login
+    </button>
   </div>
 </template>
 
@@ -23,6 +25,20 @@ export default {
     return {
       email: '',
       password: '',
+    }
+  },
+  methods: {
+    login() {
+      this.axios.post('localhost:3000/login', {
+        email: this.email,
+        password: this.password
+      })
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
     }
   }
 }

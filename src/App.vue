@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <!-- <template v-if="authenticated"> -->
+    <template v-if="authenticated">
       <h5>logged in</h5>
-    <!-- </template> -->
-    <!-- <template v-else> -->
+    </template>
+    <template v-else>
       <Login @logged-in="authenticated=true"></Login>
-    <!-- </template> -->
+    </template>
   </div>
 </template>
 

@@ -15,7 +15,7 @@
                autocomplete="current-password"
                v-model="password">
       </p>
-      <button @click="login">
+      <button @click.prevent="login">
         Login
       </button>
     </form>
@@ -38,12 +38,14 @@ export default {
       })
       .then((response) => {
         console.log('success')
+        console.log(response)
       })
       .catch((error) => {
-        debugger
         console.log(error)
         console.log('failure')
       })
+
+      this.$emit('logged-in')
     }
   }
 }

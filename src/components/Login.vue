@@ -2,20 +2,23 @@
   <div class="login">
     <h5>welcome to trend tracker</h5>
     <h5>please login to continue</h5>
-
-    <p>
-      <label>email: </label>
-      <input type="text"
-             v-model="email">
-    </p>
-    <p>
-      <label>password: </label>
-      <input type="password"
-             v-model="password">
-    </p>
-    <button @click="login">
-      Login
-    </button>
+    <form>
+      <p>
+        <label>email: </label>
+        <input type="text"
+               autocomplete="email"
+               v-model="email">
+      </p>
+      <p>
+        <label>password: </label>
+        <input type="password"
+               autocomplete="current-password"
+               v-model="password">
+      </p>
+      <button @click="login">
+        Login
+      </button>
+    </form>
   </div>
 </template>
 

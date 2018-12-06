@@ -39,13 +39,12 @@ export default {
       .then((response) => {
         console.log('success')
         console.log(response)
+        this.$emit('logged-in')
       })
       .catch((error) => {
         console.log(error)
         console.log('failure')
       })
-
-      this.$emit('logged-in')
     }
   }
 }

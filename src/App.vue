@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <template v-if="authenticated">
-      <h5>logged in</h5>
+      <Data></Data>
     </template>
     <template v-else>
       <Login @logged-in="authenticated=true"></Login>
@@ -11,10 +11,13 @@
 
 <script>
 import Login from './components/Login'
+import Data from './components/Data'
+
 export default {
   name: 'app',
   components: {
-    Login
+    Login,
+    Data
   },
   data() {
     return {

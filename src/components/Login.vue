@@ -19,10 +19,19 @@
         Login
       </button>
     </form>
+    <trend
+      :data="[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 12, 9, 11, 20]"
+      :gradient="['#6fa8dc', '#42b983', '#2c3e50']"
+      :auto-draw="true"
+      :autoDrawDuration="5000"
+      :smooth="false">
+    </trend>
   </div>
 </template>
 
 <script>
+import Trend from 'vuetrend'
+
 export default {
   data() {
     return {
@@ -44,6 +53,9 @@ export default {
         console.log(error)
       })
     }
+  },
+  components: {
+    Trend
   }
 }
 </script>

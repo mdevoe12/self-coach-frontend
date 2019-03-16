@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <template v-if="authenticated">
-      <Data></Data>
+      <Data @logged-out="authenticated=false" />
     </template>
     <template v-else>
-      <Login @logged-in="authenticated=true"></Login>
+      <Login @logged-in="authenticated=true" />
     </template>
   </div>
 </template>

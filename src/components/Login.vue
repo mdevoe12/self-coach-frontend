@@ -37,10 +37,11 @@ export default {
         password: this.password
       })
       .then((response) => {
+        console.log(response)
         this.$emit('logged-in')
       })
       .catch((error) => {
-        console.log('failure')
+        console.log(error)
       })
     }
   }

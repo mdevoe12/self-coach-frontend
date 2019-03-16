@@ -2,9 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-import Chart from 'vue2-frappe'
 
-Vue.use(VueAxios, axios, Chart)
+Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
 

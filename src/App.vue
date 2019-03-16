@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <template v-if="authenticated">
-      <Data @logged-out="authenticated=false" />
+      <Index @logged-out="authenticated=false" />
     </template>
     <template v-else>
       <Login @logged-in="authenticated=true" />
@@ -11,13 +11,13 @@
 
 <script>
 import Login from './components/Login'
-import Data from './components/Data'
+import Index from './components/Index'
 
 export default {
   name: 'app',
   components: {
     Login,
-    Data
+    Index
   },
   data() {
     return {

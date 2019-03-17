@@ -3,9 +3,21 @@
     <h4>menu</h4>
     <hr>
     <p>
+      <a href="#"
+         class="sidebar-link">
+        sleep
+      </a>
+    </p>
+    <p>
+      <a href="#"
+         class="sidebar-link">
+        workouts
+      </a>
+    </p>
+    <p>
       <a href="#" 
          @click.prevent="$emit('logged-out')"
-         class="logout-link">
+         class="sidebar-link">
         logout
       </a>
     </p>
@@ -29,11 +41,12 @@ export default {
   left: 0;
 }
 
-.logout-link {
+.sidebar-link {
   color: white;
+  text-decoration: none;
 }
 
-.logout-link:hover {
+.sidebar-link:hover {
   color: grey;
   cursor: pointer;
 }

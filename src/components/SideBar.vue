@@ -1,6 +1,14 @@
 <template>
   <div class="side-bar-wrapper">
-    <p>sidebar</p>
+    <h4>menu</h4>
+    <hr>
+    <p>
+      <a href="#" 
+         @click.prevent="$emit('logged-out')"
+         class="logout-link">
+        logout
+      </a>
+    </p>
   </div>
 </template>
 
@@ -19,6 +27,15 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.logout-link {
+  color: white;
+}
+
+.logout-link:hover {
+  color: grey;
+  cursor: pointer;
 }
 </style>
 
